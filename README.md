@@ -1,12 +1,14 @@
 # Postman API-First Hacktoberfest for Students: API starter
 
-<EDIT ME!>
-
-> README.md is a special file in your repo that gives an overview of your project - it is the landing page people see when they interact with your project. Write anything here that will help collaborators get started helping you! Feel free to replace this quote block with any explanation you want. Some things you might want to include:
-> - What the project is
-> - How to set up development environment (dependencies, local install instructions, how to run server etc.)
-> - Any special contributing instructions
-> - Project roadmap
+### An API server based on costume halloween contest by postman.
+### Setup Instructions
+```
+git clone https://github.com/yashi4001/hacktoberfest21-api-starter
+cd hacktoberfest21-api-starter
+npm install
+npm run start
+You can now test the API at localhost:3000
+```
 
 --------
 
