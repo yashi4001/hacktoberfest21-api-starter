@@ -21,7 +21,7 @@ module.exports = {
     // throw new Error('<Error message>'); // this will result in a 500
 
     var data = {
-        "status": "<string>",
+        "status": "ok",
       },
       status = '200';
 
