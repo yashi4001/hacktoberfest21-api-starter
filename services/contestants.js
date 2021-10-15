@@ -80,6 +80,9 @@ module.exports = {
     //
     // throw new Error('<Error message>'); // this will result in a 500
     const ID=Math.random().toString(36).substring(2,8);
+    const {name, costumeTitle, costumeImgUrl,city,country}=options.createContestantInlineReqJson;
+    if(!name || !costumeTitle || !costumeImgUrl || !city || !country)
+      return({ status: 404, data:{ "status":"error","message":"Must provide all fields" }});
     const user={
       id:ID,
       ...options.createContestantInlineReqJson
@@ -168,6 +171,8 @@ module.exports = {
     //
     // throw new Error('<Error message>'); // this will result in a 500
     const id=options.id;
+    const user=await User.findOne({id:id});
+    if(!user) return({ status: 404, data:{ "status":"error","message":"Contestant not found" }});
     const del=await User.findOneAndDelete({id:id});
 
     var data = {
@@ -202,6 +207,8 @@ module.exports = {
     //
     // throw new Error('<Error message>'); // this will result in a 500
     const id=options.id;
+    const user=await User.findOne({id:id});
+    if(!user) return({ status: 404, data:{ "status":"error","message":"Contestant not found" }});
     const update= await User.updateOne({id:id},[{$set:{name:options.name}}])
 
     var data = {
@@ -237,6 +244,7 @@ module.exports = {
     // throw new Error('<Error message>'); // this will result in a 500
     const id=options.id;
     const user=await User.findOne({id:id});
+    if(!user) return({ status: 404, data:{ "status":"error","message":"Contestant not found" }});
     const vote=user.votes;
     const update= await User.updateOne({id:id},[{$set:{votes:vote+1}}]);
     var data = {
