@@ -19,7 +19,7 @@ Endpoints:
 - POST /contestants
 - PATCH /contestants/:id/upvote
 ```
-####Deployed API server link:https://hacktoberfest21-api-starter.herokuapp.com
+#### Deployed API server link:https://hacktoberfest21-api-starter.herokuapp.com
 --------
 # Instructions
 
