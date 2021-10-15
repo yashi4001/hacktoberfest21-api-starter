@@ -53,9 +53,10 @@ module.exports = app;
 
 app.listen(PORT, async() => {
     console.log(
-        `Express Server started on Port ${app.get(
-            'port'
-        )} | Environment : ${app.get('env')}`
+        // `Express Server started on Port ${app.get(
+        //     'port'
+        // )} | Environment : ${app.get('env')}`
+        "Express server listening"
     );
     await mongo();
 });
