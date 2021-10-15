@@ -9,8 +9,19 @@ npm install
 npm run start
 You can now test the API at localhost:3000
 ```
+Endpoints:
+```
+- GET /
+- GET /contestants
+- GET /contestants/:id
+- PATCH /contestants/:id
+- DELETE /contestants/:id
+- POST /contestants
+- PATCH /contestants/:id/upvote
+```
 
 --------
+# Instructions
 
 ## Build the Halloween Costume Contest API server!
 
